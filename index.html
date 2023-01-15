@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets//font-awesome/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Anton|Cabin|Lato|Fjalla+One|Montserrat|Roboto&display=swap"
+    rel="stylesheet">
+
+  <title>Company</title>
+  <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
+</head>
+
+<body>
+  <div class="navbar">
+
+    <!-- Navbar logo -->
+    <div class="nav-header">
+      <div class="nav-logo">
+        <a href="#"><b>Company</b></a>
+      </div>
+    </div>
+
+    <!-- responsive navbar toggle button -->
+    <input type="checkbox" id="nav-check">
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <!-- Navbar items -->
+    <div class="nav-links">
+      <!-- Dropdown menu -->
+      <div class="dropdown">
+        <a class="dropBtn" href="#">ABOUT
+          <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="drop-content">
+          <a href="#">HISTORY</a>
+          <a href="#">VISSION MISSION</a>
+        </div>
+      </div>
+      <a href="#">OUR WORK</a>
+      <a href="#">OUR TEAM</a>
+      <a href="#">CONTACT</a>
+    </div>
+  </div>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="asset/images/bg.jpg" style="width:100%">
+      <div class="text">this is a place where technology & creativity fused into digital chemistry
+      </div>
+    </div>
+    <div class="mySlides fade">
+      <img src="asset/images/about-bg.jpg" style="width:100%">
+      <div class="text">we don't have the best but we have the greatest team</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+
+  <!-- <h2 style="text-align: center; margin-top: 5%;">OUR VALUES</h2> -->
+  <section class="services">
+    <div class="kotak">
+      <div class="title">
+        <h2>OUR VALUES</h2>
+      </div>
+      <div class="services_boxes">
+        <div class="box1">
+          <img src="asset/images/lightbulb-o.png"">
+              <h4>INNOVATIVE</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, aspernatur.</p>
+            </div>
+    
+            <div class=" box2">
+          <img src="asset/images/bank.png"">
+              <h4>LOYALTY</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, aspernatur.</p>
+            </div>
+    
+            <div class=" box3">
+          <img src="asset/images/balance-scale.png"">
+              <h4>RESPECT</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, aspernatur.</p>
+            </div>
+          </div>
+      </div>
+      </section>
+
+      <section class=" services">
+          <div class="kotak">
+            <div class="title">
+              <h2>CONTACT US</h2>
+            </div>
+          </div>
+  </section>
+
+  <div class="fcf-body">
+
+    <div id="fcf-form">
+      <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+
+        <div class="fcf-form-group">
+          <label for="Name" class="fcf-label">Name</label>
+          <div class="fcf-input-group">
+            <input placeholder="Your name.." type="text" id="Name" name="Name" class="fcf-form-control" required>
+          </div>
+        </div>
+
+        <div class="fcf-form-group">
+          <label for="Email" class="fcf-label">Email</label>
+          <div class="fcf-input-group">
+            <input type="email" placeholder="Your email.." pattern="[^ @]*@[^ @]*" id="Email" name="Email"
+              class="fcf-form-control" required>
+          </div>
+        </div>
+
+        <div class="fcf-form-group">
+          <label for="Message" class="fcf-label">Message</label>
+          <div class="fcf-input-group">
+            <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
+              required></textarea>
+          </div>
+        </div>
+
+        <div class="fcf-form-group">
+          <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <br>
+    <p align="center">Copyright @ 2016. PT Company</p>
+    <center>
+      <div>
+        <a class="social-media-icon" href="https://link_social_mendia_anda"><span class="fab fa-facebook"></span></a>
+        <a class="social-media-icon" href="https://link_social_mendia_anda"><span class="fab fa-twitter"></span></a>
+      </div>
+    </center>
+    <br>
+  </footer>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</body>
+
+</html>
